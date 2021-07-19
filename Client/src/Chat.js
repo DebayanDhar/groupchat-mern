@@ -5,7 +5,6 @@ import MicIcon from  '@material-ui/icons/Mic'
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {gql, useMutation} from '@apollo/client'
-//import axios from "./axios";
 import './Chat.css'
 import { useStateValue } from './StateProvider';
 
@@ -35,16 +34,13 @@ function Chat({ messages })
     const [input,setInput]=useState('');
     const [addMessage]=useMutation(setMessages);
     const [{ user }, dispatch] = useStateValue();
-    //const [textMessages,setTextMessages]=useState([]);
     const [groupname , setGroupName] = useState('');
     const { groupName }=useParams();
-    //const temparray=messages.filter((message) => { return message.group === groupname});
-        //setTextMessages(temparray);
+    
 
     useEffect(() => {
         setGroupName(groupName);
-        //const temparray=messages.filter((message) => { return message.group === groupname});
-        //setTextMessages(temparray);
+        
 
     } , [groupName]);
 
@@ -68,14 +64,7 @@ function Chat({ messages })
         } catch (error) {
             console.log(error);
         }
-         /*axios.post('/messages/new',{
-            message: input,
-            name: "Debayan",
-            timestamp: new Date().toUTCString(),
-            group: groupname,
-            received: false,
-
-        });*/
+    
 
 
 

@@ -1,7 +1,6 @@
 import './App.css';
 import Sidebar from './Sidebar.js'; 
 import Chat from './Chat.js'; 
-//import Pusher from 'pusher-js';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState} from 'react';
 import {
