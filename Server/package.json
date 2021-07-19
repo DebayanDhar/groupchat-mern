@@ -9,7 +9,7 @@
     "start": "nodemon --exec babel-node ./index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Debayan Dhar",
   "license": "ISC",
   "dependencies": {
     "@graphql-tools/schema": "^7.1.5",
